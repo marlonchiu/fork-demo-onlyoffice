@@ -21,6 +21,9 @@ const editorConfig = {
     url: `${process.env.VUE_APP_API_SERVER}/static/test1.docx`,
     // 文档标题
     title: '测试文档一.docx'
+  },
+  editorConfig: {
+    lang: 'zh-CN'
   }
 }
 
@@ -31,6 +34,7 @@ export default {
     }
   },
   mounted () {
+    console.log(process.env.VUE_APP_API_SERVER)
     this.initEditor()
   },
   beforeDestroy () {

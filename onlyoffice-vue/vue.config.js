@@ -27,7 +27,7 @@ module.exports = {
         logLevel: 'debug'
       },
       [onlyofficeApiPrefix]: {
-        target: 'http://127.0.0.1:8701',
+        target: 'http://172.10.10.161:8701',
         ws: false,
         changeOrigin: true,
         pathRewrite: {
