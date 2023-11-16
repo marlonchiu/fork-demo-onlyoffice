@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基础Demo</title>
+    <script type="text/javascript" src="http://172.10.10.161:8090/web-apps/apps/api/documents/api.js"></script>
+  </head>
+  <body>
+    <div id="placeholder"></div>
+    <script>
+      new DocsAPI.DocEditor('placeholder', {
+        height: 800,
+        width: 1200,
+        document: {
+          fileType: 'docx',
+          permissions: {
+            comment: false,
+            download: true,
+            edit: true,
+            print: true,
+            review: true
+          },
+          // key: 'test5.docx',
+          key: '1-wnjs-ZHUOZHIHUIYANFAGUANLILIUCHENG.docx',
+          // key: 'Khirz6zTPdfd7',
+          title: '研发管理流程.docx',
+          url: 'http://172.10.10.4:4000/static/test5.docx'
+          // url: 'http://zytds.zhuoxiaohui.com:5000/test/AI_KNOWLEDGE/1/202311/u16m1urrvj.docx'
+        },
+        documentType: 'word',
+        editorConfig: {
+          callbackUrl: 'http://172.10.10.4:8888/tds-ai/knowledgeDoc/edit',
+          // callbackUrl: 'http://172.10.10.7:3000/api/v1/onlyoffice/callback',
+          lang: 'zh-CN',
+          customization: {
+            forcesave: false,
+            features: {
+              spellcheck: false
+            }
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
